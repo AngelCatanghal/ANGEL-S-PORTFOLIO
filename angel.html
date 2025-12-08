@@ -1,81 +1,329 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-      <title> MY PORTFOLIO </title> 
-	  <link rel="stylesheet" href="style.css">
-	  <script>alert("what's up")
-	  
-	  let firstName = "angel";
-	  console.log(typeof firstName)
-	  
-	 let num="Angel";
-	 
-	 //first value
-	 console.log(firstName);
-	 //assignment
-	firstName=16;
-	console.log(firstName);
-	   
-	   
-	   let result = prompt("HELLO", " guys");
-	   console.log(text);
-	   confirm("eyyy");
-	   
-	   
-	   
-	   
-	 
-	  
-	  </script>
-	  
-	  
+    </title>Angel's Portfolio</title>
+    
+    <script>
+    alert("what's up")
+‎  
+‎  let firstName = "angel";
+‎  console.log(typeof firstName)
+‎  
+‎ let num="Angel";
+‎ 
+‎ //first value
+‎ console.log(firstName);
+‎ //assignment
+‎firstName=16;
+‎console.log(firstName);
+‎   
+‎   
+‎let result = prompt("HELLO", " How's your day?");
+‎   console.log(text);
+‎   confirm("eyyy");
+</script>
 
-  </head>
-  <body>
-  <header>
-  
-  <h1>ANGEL'S PORTFOLIO</h1>
-  <nav>
-  <ul> 
-  <li><a href= "About">About</a></li>
-  <li><a href= "Projects">Projects</a></li>
-  <li><a href= "Contacts">Contacts</a></li>
-  </ul>
-  </nav>
-  </header>
- 
-  <div class="profile-section">
-  <img src=""alt"angel-web developer"class"profile-image">
-  
-  <h2> Hi I'm Angel </h2>
-  <p>Web Developer| Passionate about creating engaging and user friendly websites</p>
-  <div class="btn-container">
-  <a href="#projects"class="btn">VIEW MY WORK</a>
-  </div>
-  
-  
-  <h2> ABOUT ME </h2>
-  <p>Hey there!I'm Angel,an ict student passionate about technology and innovation. I'm currently learning and exploring various aspects of ICT,from coding to digital design.I'm excited to apply my skills and knowledge to realworld projects and collaborate withe like minded individuals</p>
-  
-  
-  <h3 id="projects">PROJECTS📂</h3>
-  <div class="projects-container">
-  
-  <div class="project">
-  <img src=""alt="project 1">
-  <h4>PROJECT 1</h4>
-  <p>My first project</p>
-  <a href="projects.html"class="btn">VIEW DETAILS</a>
-  
-  <div class="project">
-  <img src=""alt="project 2">
-  <h4>PROJECT 2</h4>
-  <p>My second project</p>
-  <a href="projects.html"class="btn">VIEW DETAILS</a>
-  
-  </section>
-  
- 
-  </body> 
-  </html>
-  
+</head>
+<body>
+    <header>
+        <h1>My Portfolio📁</h1>
+        <nav>
+            <ul>
+             <li><a href="#">Home></li>
+              <li><a href="#">About</a></li>
+               <li><a href="#">Project</a></li>
+                <li><a href="#">Skills</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Hello, It's Me <span class="name">Angel Catanghal</span></h2>
+            <p> a passionate web developer with a love for creating engaging and user-friendly websites. With a strong foundation in HTML, CSS, and JavaScript, I enjoy bringing ideas to life on the web. I'm always looking to learn and improve my skills, and I'm excited to take on new challenges and projects.</p>
+</p>
+          
+            <button>More About Me</button>
+        </div>
+        <div class="hero-image">
+            
+        </div>
+    </section>
+    
+
+    <footer>
+        <p>&copy; 2025-2026 Angel Catanghal. All rights reserved.</p>
+        <img src="" alt="Angel Catanghal">
+    <section class="about-me">
+    <h2>ABOUT ME</h2>
+    <p>Web Developer | Passionate about creating engaging and user-friendly websites.</p>
+  </p>
+    <div class="skills">
+        <div class="skill-card">
+            <i class="fas fa-code"></i>
+            <h3>HOBBIES </h3>
+            <p>Writing well-structured, semantic HTML, and React components for maintainable codebases.</p>
+        </div>
+        <div class="skill-card">
+          
+            <h3>SKILLS</h3>
+            <p>Crafting visually appealing interfaces using Tailwind CSS and responsive design principles.</p>
+            
+        </div>
+    </div>
+</section>
+
+<section class="my-projects">
+    <h2>MY PROJECTS 📑</h2>
+    <p>Here are some of the projects I've worked on, showcasing my skills in creating functional, visually appealing, and user-friendly websites.</p>
+    <div class="projects-container">
+        <div class="project-card">
+            <img src="floral-delights.jpg" alt="Floral Delights Flower Shop Website">
+            <h3>PROJECT 1</h3>
+            <p>The Flower Shop is a static website designed to showcase a variety of flowers available for purchase. This website provides users with an easy-to-navigate interface to explore different flower types, view details, and make inquiries.</p>
+    
+    
+            <a href="#" class="view-project">View Project</a>
+        </div>
+        <div class="project-card">
+            <img src="ecommerce-web-app.jpg" alt="E-Commerce Web App">
+            <h3>PROJECT 2</h3>
+            <p>An E-Commerce bookstore web application where users can browse, search, and purchase books online. Built with React, NodeJS, and MongoDB—providing a smooth, and dynamic shopping experience.</p>
+            
+            <a href="#" class="view-project">View Project</a>
+        </div>
+        <div class="project-card">
+            <img src="chill-grind.jpg" alt="Chill and Grind Clothing Website">
+            <h3>PROJECT 3</h3>
+            <p>A clean, responsive, and user-friendly clothing site built with HTML and CSS. This static web project showcases a landing page, FAQ section, and styling using custom CSS.</p>
+            <a href="#" class="view-project">View Project</a>
+        </div>
+    </div>
+</section>
+
+
+    
+    <style>
+   
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0a192f; 
+    color: #ccd6f6; 
+}
+
+header {
+    background-color: #112240;
+    color: #fff;
+    padding: 5px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-content h2 {
+    font-size: 2rem;
+    color: #64ffda; 
+}
+
+.hero-content .name {
+    color: #f9f871; 
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.social-links a {
+    margin-right: 0.5rem;
+    color: #ccd6f6;
+    font-size: 1.3rem;
+}
+
+.hero-content button {
+    background-color: #64ffda;
+    color: #0a192f;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.hero-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #64ffda;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #112240;
+    color: #ccd6f6;
+}
+
+.about-me {
+    padding: 2rem;
+    text-align: center;
+
+}
+
+.about-me h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color:yellow;
+
+
+    
+}
+
+.about-me p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: white;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+.skills {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.skill-card {
+    background-color: lightseagreen;
+    border-radius: 10px;
+    padding: 1.5rem;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.skill-card i {
+    font-size:25px;
+    color: #007bff; 
+    margin-bottom: 15px;
+}
+
+.skill-card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color:black;
+}
+
+.skill-card p {
+    font-size:15px;
+    color: white;
+}
+.my-projects {
+    padding: 20px;
+    text-align: center;
+  background-color: #0a192f; 
+
+}
+
+.my-projects h2 {
+    font-size: 40px;
+    margin-bottom: 1rem;
+    color: yellow;
+}
+
+.my-projects p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: white;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background-color: lightseagreen;
+    border-radius: 10px;
+    padding: 1.5rem;
+    width: 350px;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color:black;
+}
+
+.project-card p {
+    font-size: 1rem;
+    line-height: 1.4;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+
+
+
+.view-project {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.view-project:hover {
+    background-color: #0056b3;
+}
+
+    
+    </style>
+</body>
+</html>
