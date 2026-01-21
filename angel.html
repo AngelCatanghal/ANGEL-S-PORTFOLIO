@@ -3,7 +3,7 @@
 <head>
     <title>Angel's Portfolio</title>
     <script>
-        alert("what's up");
+       I alert("hey");
 
         let firstName = "angel";
         console.log(typeof firstName);
@@ -15,296 +15,202 @@
         //assignment
         firstName = 16;
         console.log(firstName);
-
-        let result = prompt("HELLO", " How's your day?");
-        console.log(result); // Corrected: log the result
-        confirm("eyyy");
+        let result = prompt("HELLO", " How are you?");
+        console.log(result); 
+        confirm("It's great that you're feeling good");
     </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #0a192f;
-            color: #ccd6f6;
-        }
+    
+    <!-- Link to CSS File -->
+    <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-        header {
-            background-color: #112240;
-            color: #fff;
-            padding: 5px 0;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-        }
-
-        nav ul {
-            padding: 0;
-            list-style: none;
-        }
-
-        nav ul li {
-            display: inline;
-            margin: 0 1rem;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .hero {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            padding: 2rem;
-        }
-
-        .hero-content {
-            max-width: 600px;
-        }
-
-        .hero-content h2 {
-            font-size: 2rem;
-            color: #64ffda;
-        }
-
-        .hero-content .name {
-            color: #f9f871;
-        }
-
-        .hero-content p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
-
-        .social-links a {
-            margin-right: 0.5rem;
-            color: #ccd6f6;
-            font-size: 1.3rem;
-        }
-
-        .hero-content button {
-            background-color: #64ffda;
-            color: #0a192f;
-            border: none;
-            padding: 0.75rem 1.5rem;
-            margin-top: 1rem;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-
-        .hero-image img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid #64ffda;
-        }
-
-        footer {
-            text-align: center;
-            padding: 1rem 0;
-            background-color: #112240;
-            color: #ccd6f6;
-        }
-
-        .about-me {
-            padding: 2rem;
-            text-align: center;
-
-        }
-
-        .about-me h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: yellow;
-        }
-
-        .about-me p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: white;
-            max-width: 700px;
-            margin: 0 auto 2rem;
-        }
-
-        .skills {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .skill-card {
-            background-color: lightseagreen;
-            border-radius: 10px;
-            padding: 1.5rem;
-            width: 300px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .skill-card i {
-            font-size: 25px;
-            color: #007bff;
-            margin-bottom: 15px;
-        }
-
-        .skill-card h3 {
-            font-size: 20px;
-            margin-bottom: 15px;
-            color: black;
-        }
-
-        .skill-card p {
-            font-size: 15px;
-            color: white;
-        }
-
-        .my-projects {
-            padding: 20px;
-            text-align: center;
-            background-color: #0a192f;
-        }
-
-        .my-projects h2 {
-            font-size: 40px;
-            margin-bottom: 1rem;
-            color: yellow;
-        }
-
-        .my-projects p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: white;
-            max-width: 800px;
-            margin: 0 auto 2rem;
-        }
-
-        .projects-container {
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            flex-wrap: wrap;
-        }
-
-        .project-card {
-            background-color: lightseagreen;
-            border-radius: 10px;
-            padding: 1.5rem;
-            width: 350px;
-            text-align: left;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .project-card img {
-            width: 100%;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-        }
-
-        .project-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-            color: black;
-        }
-
-        .project-card p {
-            font-size: 1rem;
-            line-height: 1.4;
-            color: white;
-            margin-bottom: 1rem;
-        }
-
-        .view-project {
-            display: inline-block;
-            background-color: #007bff;
-            color: #fff;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-
-        .view-project:hover {
-            background-color: #0056b3;
-        }
-    </style>
 </head>
 <body>
-    <header>
-        <h1>My Portfolio📁</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Project</a></li>
-                <li><a href="#">Skills</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section class="hero">
-        <div class="hero-content">
-            <h2>Hello, It's Me <span class="name">Angel Catanghal</span></h2>
-            <p>a passionate web developer with a love for creating engaging and user-friendly websites. With a strong foundation in HTML, CSS, and JavaScript, I enjoy bringing ideas to life on the web. I'm always looking to learn and improve my skills, and I'm excited to take on new challenges and projects.</p>
-
-            <button>More About Me</button>
+    <div class="intro-screen">
+        <div class="intro-text-container">
+            <div class="typing-text" id="intro-line1">Welcome To My</div>
+            <div class="typing-text" id="intro-line2">Portfolio Website</div>
         </div>
-        <div class="hero-image">
+    </div>
 
+    <div class="portfolio-content">
+        <header>
+            <h1>Angel's Portfolio📁</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about-section">About</a></li>
+                    <li><a href="#projects">Project</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero" id="home">
+                <div class="hero-content">
+                    
+                    <h2>Hello, It's Me <span class="name">Angel Catanghal</span></h2>
+                    <p>a passionate web developer with a love for creating engaging and user-friendly websites. With a strong foundation in HTML, CSS, and JavaScript, I enjoy bringing ideas to life on the web. I'm always looking to learn and improve my skills, and I'm excited to take on new challenges and projects.</p>
+                    
+                    
+
+<div class="social-container">
+        <!-- FACEBOOK ICON -->
+        <div class="icon-wrapper">
+            <div class="tooltip facebook-tooltip">Facebook</div>
+            <a href="https://www.facebook.com/[Angel Catanghal]" target="_blank" class="icon">
+                <i class="fab fa-facebook-f facebook-icon"></i>
+            </a>
         </div>
-    </section>
 
-    <footer>
-        <p>&copy; 2025-2026 Angel Catanghal. All rights reserved.</p>
-        <img src="" alt="Angel Catanghal">
-    </footer>
-
-    <section class="about-me">
-        <h2>ABOUT ME</h2>
-        <p>Web Developer | Passionate about creating engaging and user-friendly websites.</p>
-
-        <div class="skills">
-            <div class="skill-card">
-                <i class="fas fa-code"></i>
-                <h3>HOBBIES</h3>
-                <p>Writing well-structured, semantic HTML, and React components for maintainable codebases.</p>
-            </div>
-            <div class="skill-card">
-                <h3>SKILLS</h3>
-                <p>Crafting visually appealing interfaces using Tailwind CSS and responsive design principles.</p>
-            </div>
+        <!-- INSTAGRAM ICON -->
+        <div class="icon-wrapper">
+            <div class="tooltip instagram-tooltip">Instagram</div>
+            <a href="https://www.instagram.com/[gelly_yrn]" target="_blank" class="icon">
+                <i class="fab fa-instagram instagram-icon"></i>
+            </a>
         </div>
-    </section>
 
-    <section class="my-projects">
-        <h2>MY PROJECTS 📑</h2>
-        <p>Here are some of the projects I've worked on, showcasing my skills in creating functional, visually appealing, and user-friendly websites.</p>
-        <div class="projects-container">
-            <div class="project-card">
-                <img src="floral-delights.jpg" alt="Floral Delights Flower Shop Website">
-                <h3>PROJECT 1</h3>
-                <p>The Flower Shop is a static website designed to showcase a variety of flowers available for purchase. This website provides users with an easy-to-navigate interface to explore different flower types, view details, and make inquiries.</p>
-                <a href="#" class="view-project">View Project</a>
-            </div>
-            <div class="project-card">
-                <img src="ecommerce-web-app.jpg" alt="E-Commerce Web App">
-                <h3>PROJECT 2</h3>
-                <p>An E-Commerce bookstore web application where users can browse, search, and purchase books online. Built with React, NodeJS, and MongoDB—providing a smooth, and dynamic shopping experience.</p>
-                <a href="#" class="view-project">View Project</a>
-            </div>
-            <div class="project-card">
-                <img src="chill-grind.jpg" alt="Chill and Grind Clothing Website">
-                <h3>PROJECT 3</h3>
-                <p>A clean, responsive, and user-friendly clothing site built with HTML and CSS. This static web project showcases a landing page, FAQ section, and styling using custom CSS.</p>
-                <a href="#" class="view-project">View Project</a>
-            </div>
+        <!-- GITHUB ICON -->
+        <div class="icon-wrapper">
+            <div class="tooltip github-tooltip">GitHub</div>
+            <a href="https://www.github.com/[Angel Catangha]" target="_blank" class="icon">
+                <i class="fab fa-github github-icon"></i>
+            </a>
         </div>
-    </section>
+        </div>
+        
+                    <button>View Projects</button>
+                    </div>
+                    
+                
+                <div class="hero-image">
+                    <img src="/images/anime-firl.gif">
+            </section>
+
+<section class="about-me-final" id="about-section">
+    
+    <div class="about-image">
+        <img src="/aesthetic-black-pfp-30.jpg" alt="Angel Catanghal">
+    </div>
+    <div class="about-text-box">
+        <h2>About Me</h2>
+        <p>As a ICT student, I combine what I learn in school with real-world experience to grow my knowledge and skills in the field. Being a beginner, I know there is still so much for me to explore – but I enjoy every step of the journey. I love building websites that are not only functional but also visually appealing. Even when projects feel difficult at first, each project I work on, whether for school or as a freelancer, becomes an opportunity to improve my abilities and gain more confidence.</p>
+        <p>What excites me most is turning simple ideas into real projects that can inspire me. As I continue to study and practice, my goal is to sharpen my skills in web development, design, and programming. I believe that with dedication, curiosity, and continuous learning, I can create meaningful projects and contribute positively to the digital world.</p>
+        
+        
+        <a href="about me.html" class="about-btn" target="_self">View more</a>
+    </div>
+</section>
+
+<section class="skills-section" id="skills">
+    <h2 class="skills-title">Skills</h2>
+
+    <div class="skills-container">
+        <div class="skill-card" tabindex="0">
+            <h3>Writer</h3>
+            <p>Writing is my skill, and I enjoy expressing myself through stories and articles.</p>
+          <a href="writer skills.html" class="skill-link">View more</a>
+        </div>
+
+        <div class="skill-card" tabindex="0">
+            <h3>Editing</h3>
+            <p>I'm skilled at video editing and can bring your story to life with engaging visuals and sound design.</p>
+            <a href="Editing.html" class="skill-link">View more</a>
+        </div>
+
+        <div class="skill-card" tabindex="0">
+            <h3>Crafting</h3>
+            <p>Crafting is my way of expressing my creativity and bringing new ideas to life.</p>
+            <a href="tools-skills.html" class="skill-link">View more</a>
+        </div>
+    </div>
+</section>
+<hr>
+
+
+       <section class="my-projects" id="projects">
+                <h2>MY PROJECTS 📑</h2>
+                <p>This project showcases my skills and accomplishments in various tasks and activities. The projects include Performance Task 1 and 2, Activities, and Notes, which demonstrate my capabilities and experiences. These projects highlight my growth and progress in different areas of my work. I was able to showcase my creativity and skills through these projects. Overall, these projects represent my best work and a reflection of my efforts.</p>
+                <div class="projects-container">
+                    <div class="project-card">
+                        <img src="/images/carpetas-con-el-icono-de-neón-los-documentos-elementos-del-sistema-la-web-simple-para-las-p-ginas-dise-o-app-m-vil-gr-ficos-148836392.jpg">
+                        <h3>Performance task 1</h3>
+                        <p>The content of Performance Task 1 includes my projects in Computer Programming that demonstrate my knowledge and skills in creating digital content.</p>
+                        <a href="Performance task 1.html" class="side-btn">View</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="  /images/online-artificial-intelligence-shopping-icon-elements-artifical-neon-style-icons-simple-websites-web-design-mobile-app-136553608.jpg">
+                        <h3>Performance task 2</h3>
+                        <p>The contents include another project, specifically Performance Task 2, which showcases my skills and knowledge in Computer Programming through a project that demonstrates my expertise.</p>
+                        <a href="Performance task 2.html" class="side-btn">View</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="/images/istockphoto-1145679756-170667a.jpg">
+                        <h3>Activities</h3>
+                        <p>The activities include quizzes, coding exercises, JavaScript activities, and other assessments that test my knowledge and skills in Computer Programming.</p>
+                        <a href="Activities.html" class="side-btn">View</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="/images/images (9).jpeg">
+                        <h3>Notes</h3>
+                        <p>My notes for Computer Programming provide a comprehensive overview of the subject, covering key concepts, theories, and practical applications that help me reinforce my understanding and skills.</p>
+                        <a href="Notes.html" class="side-btn">View</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="my-projects" style="margin-top: 5rem; padding-bottom: 3rem;">
+                <h2>BIBLE VERSES</h2>
+                
+                <div class="original-style-carousel">
+                    <div class="carousel-slides">
+                        <!-- Card 1 -->
+                        <div class="carousel-card">
+                            <div class="card-bg" style="background-image: url('/images/1767512727192.jpg');"></div>
+                            <div class="card-content">
+                                
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="carousel-card">
+                            <div class="card-bg" style="background-image: url('/images/1767512722685.jpg');"></div>
+                            <div class="card-content">
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="carousel-card">
+                            <div class="card-bg" style="background-image: url('/images/1767512729883.jpg');"></div>
+                            <div class="card-content">
+       </div>
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="carousel-card">
+                            <div class="card-bg" style="background-image: url('/images/1767512735837.jpg');"></div>
+                            <div class="card-content">
+                           </div>
+                        </div>
+                        <!-- Card 5 -->
+                        <div class="carousel-card">
+                            <div class="card-bg" style="background-image: url('/images/1767513378673.jpg');"></div>
+                            <div class="card-content">
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fake Buttons para mag mukhang goods ehehe-->
+                    <div class="carousel-buttons">
+                        <span class="btn">⟨</span>
+                        <span class="btn">⟩</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Angel Catanghal. All Rights Reserved.</p>
+        </footer>
+    </div>
 </body>
 </html>
