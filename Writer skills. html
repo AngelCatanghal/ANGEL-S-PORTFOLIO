@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Writer Skills</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        body {
+            background-image:url(/images/tumblr_pk56rtBoPQ1uzwgsuo1_400.gif);
+                background-size: cover;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            padding: 2rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .top-nav {
+            width: 100%;
+            max-width: 950px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding: 0 1rem;
+            
+
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.10rem; 
+        }
+
+        .nav-links a {
+            color:gold;
+            text-decoration: none;
+            font-size: 1.52rem;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: #FF6B9E;
+        }
+
+        .nav-links a.active {
+            color: #FF6B9E;
+            font-weight: 600;
+        }
+
+        .main-container {
+            width: 100%;
+            max-width: 950px;
+            border-radius: 28px;
+            padding: 3rem 3.5rem;
+            box-shadow: 10px 0 30px deeppink;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 2rem;
+            flex-wrap: wrap; 
+        }
+
+        .petal {
+            position: absolute;
+            background: hotpink;
+            border-radius: 50% 0 50% 50%;
+            transform: rotate(45deg);
+            z-index: 0;
+        }
+
+        .petal-1 { top: 22px; right: 22px; width: 20px; height: 20px; }
+        .petal-2 { top: 90px; right: 190px; width: 14px; height: 14px; }
+        .petal-3 { bottom: 35px; right: 40px; width: 16px; height: 16px; }
+        .petal-4 { top: 160px; left: 35px; width: 12px; height: 12px; }
+        .petal-5 { bottom: 90px; left: 210px; width: 13px; height: 13px; }
+        .petal-6 { top: 220px; right: 80px; width: 10px; height: 10px; }
+
+        .text-section {
+            flex: 1;
+            padding-top: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .main-title {
+            color: #FF6B9E;
+            font-size: 2.6rem;
+            line-height: 1.15;
+            margin-bottom: 1.2rem;
+            font-weight: 680;
+            letter-spacing: -0.5px;
+            line-height: 1.3; 
+        }
+
+        .main-desc {
+            color: floralwhite;
+            font-size: 0.88rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            max-width: 320px;
+            letter-spacing: 0.2px;
+        }
+
+        .search-box {
+            position: relative;
+            margin-bottom: 2.5rem;
+        }
+
+        .search-box input {
+            width: 100%;
+            max-width: 320px;
+            padding: 0.95rem 1.3rem;
+            border: 2px solid #FFD8E3;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            color: black; 
+            outline: none;
+            background: lightpink;
+        }
+
+        .search-box input::placeholder {
+            color: rgba(0, 0, 0, 0.7);
+        }
+
+        .search-box button {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #FF6B9E;
+            color: #FFFFFF;
+            border: none;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-size: 0.75rem;
+            transition: background 0.2s ease; 
+        }
+
+        .search-box button:hover {
+            background: #ff4a85;
+        }
+
+        .thumb-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.9rem;
+            max-width: 320px;
+        }
+
+        .thumb-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 8px hotpink;
+            width: 100%;
+            height: 85px; 
+            transition: transform 0.5s ease; 
+        }
+
+        .thumb-item:hover {
+            transform: scale(2); 
+        }
+
+        .thumb-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Image featured */
+        .image-section {
+            flex: 1.2;
+            position: relative;
+            z-index: 1;
+            margin-top: 1rem;
+        }
+
+        .writer-frame { 
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .frame-border {
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border: 2.5px solid #FF6B9E;
+            border-radius: 25px;
+            background: linear-gradient(90deg, rgba(255, 107, 158, 0.15), transparent 25%);
+            pointer-events: none;
+        }
+        
+        .frame-border::after {
+            content: ""; 
+            position: absolute;
+            right: 12px;
+            top: 15px;
+            bottom: 15px;
+            width: 8px;
+            background: linear-gradient(180deg, #FF6B9E, rgba(255, 107, 158, 0.3));
+            border-radius: 4px;
+        }
+        
+        .frame-border::before {
+            content: ""; 
+            position: absolute;
+            right: 14px;
+            top: 45px;
+            width: 4px;
+            height: 4px;
+            background: hotpink;
+            border-radius: 1px;
+            box-shadow: 0 8px 0 #FFFFFF, 0 16px 0 hotpink;
+        }
+
+        .main-anime-img {
+            width: 100%;
+            max-width: 500px;
+            height: auto; 
+            max-height: 650px;
+            display: block;
+            border-radius: 20px;
+            object-fit: cover; 
+        }
+
+
+
+/* ========== SITE HEADER ========== */
+.site-header {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.site-title {
+    color: #FF6B9E;
+    font-size: 30px;
+    text-shadow: 1px 1px  hotpink;
+}
+
+.site-tagline {
+    color: floralwhite;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+
+/* ========== FANTASY STORIES SECTION ========== */
+.fantasy-section {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 2px solid hotpink;
+    border-radius: 40px;
+}
+
+.fantasy-box {
+    position: relative;
+    width: 100%;
+    height: 370px;
+    border-radius: 20px 20px 0 20px;
+    overflow: hidden;
+    
+}
+
+.section-text {
+    position: absolute;
+    top: 10px;
+    left:20px;
+    text-align:left;
+    color: #FF4A85;
+    z-index: 1;
+}
+
+.section-text h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.section-text p {
+    font-size: 20px;
+    line-height: 1.4;
+    max-width: 900px;
+    margin-bottom: 8px;
+    color: whitesmoke;
+}
+
+.section-btn:hover {
+    background: #FF4A85;
+}
+
+.section-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110%;
+    height: 110%;
+    object-fit: cover;
+    border-radius: 0 10px 30px 0;
+}
+
+/* BOOKS SECTION - LANDSCAPE LAYOUT */
+.books-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* FEATURED BOOKS TITLE */
+.section-title {
+    font-size: 32px;
+    color: hotpink;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.books-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.book-item {
+    width: 200px;
+    text-align: center;
+    padding: 10px 0;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    box-shadow: 0 0 5px hotpink;
+}
+
+.book-item:hover {
+    box-shadow: 0 0 10px deeppink, 0 0 20px purple;
+    transform: translateY(-30px);
+}
+
+.book-item img {
+    height: 160px;
+    width: 110px;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 0.3s ease;
+}
+
+.book-item:hover img {
+    box-shadow: 0 0 20px purple;
+}
+
+.book-item h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: hotpink;
+    text-transform: uppercase;
+}
+
+.book-item p {
+    font-size: 12px;
+    line-height: 1.4;
+    color: floralwhite;
+    margin-bottom: 15px;
+    padding: 0 5px;
+}
+
+
+/* ========== FEATURED STORIES CARDS ========== */
+.section-title {
+    text-align: center;
+    color: #FF6B9E;
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-shadow: 1px 5px 8px hotpink;
+}
+
+.cards-container {
+    overflow: hidden;
+    width: 110%;
+    margin-bottom: 20px;
+    padding: 0 20px;
+    height:210px;
+}
+
+.cards-scroll {
+    display: flex;
+    animation: slide 8s linear infinite;
+    gap: 29px;
+}
+
+.story-card {
+    min-width: 40%;
+    background: hotpink;
+    border-radius: 15px;
+    padding: 8px;
+    flex-shrink: 0;
+    text-align: center;
+    transition: transform 0.2s ease;
+    box-shadow: 0 3px 6px hotpink;
+}
+
+.story-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(255, 107, 158, 0.2);
+}
+
+.story-card.featured {
+    background: #FFD8E3;
+}
+
+.card-img {
+    width: 100%;
+    height: 160px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    border: 2px solid hotpink;
+    object-fit: cover;
+}
+
+.story-card h3 {
+    color: #FF6B9E;
+    font-size: 20px;
+    margin-bottom: 3px;
+    line-height: 1.2;
+}
+
+.story-card p {
+    color: antiquewhite;
+    font-size: 11px;
+}
+
+.view-btn {
+    background: #FF6B9E;
+    color: white;
+    border: none;
+    padding: 6px 18px;
+    border-radius: 8px;
+    font-size: 12px;
+    display: block;
+    margin: 0 auto 15px auto;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.view-btn:hover {
+    background: #FF4A85;
+}
+
+
+
+/* ========== SLIDE ANIMATION ========== */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50% - 9.5px)); }
+}
+
+
+/* ========== MOBILE RESPONSIVENESS ========== */
+@media (max-width: 600px) {
+    .fantasy-box, .romance-box {
+        height: 250px;
+    }
+
+    .section-text {
+        right: 20px;
+        top: 15px;
+    }
+
+    .romance-text {
+        left: 20px;
+        top: 15px;
+    }
+
+    .section-img, .romance-img {
+        width: 45%;
+    }
+
+    .story-card {
+        min-width: 40%;
+    }
+
+}
+
+    </style>
+</head>
+<body>
+    <!-- ========== CENTERED NAVBAR ========== -->
+        <div class="nav-links">
+            <a href="angel.html" class="active">Home</a>
+            <a href="books-section
+           ">Mwriter</a>
+            <a href="#FStory">FStory</a>
+            <a href="#Mbooks">Mbooks</a>
+        </div>
+    </nav>
+
+    <!-- ========== MAIN CONTAINER ★ ========== -->
+        <div id="Home" class="main-container">
+        
+        <!-- Decorative Petals -->
+        <div class="petal petal-1"></div>
+        <div class="petal petal-2"></div>
+        <div class="petal petal-3"></div>
+        <div class="petal petal-4"></div>
+        <div class="petal petal-5"></div>
+        <div class="petal petal-6"></div>
+
+        <div class="text-section">
+            <h1 class="main-title">Hi, it's me Angel,<br>I'm a writer who creates all kinds of novels & stories</h1> 
+            <p class="main-desc">I write all kinds of things that say a lot, from personal stories and sweet love tales to clear professional writing and thoughtful essays. My ability to do this first sparked when I was 11 years old, and I can easily imagine all the happenings in each story too. Every piece comes from the heart now, made to share a message simply and strongly. I put my stories on Wattpad and other social apps so people can read them anywhere, on their phone or tablet. That’s how I get to connect with readers near and far, whether it’s for work or just for fun.</p>
+            
+            <div class="search-box">
+                <input type="text" placeholder="Describe your favorite fictional characters...">
+                <button>➡️</button>
+            </div>
+
+            <div class="thumb-grid">
+                <div class="thumb-item"><img src="images/21beefe261d5842d8ca9fee4ace925c7.jpg" alt="Story character illustration"></div>
+                
+                <div class="thumb-item"><img src="images/64daced31635a25e394475d7d7b22745.jpg" alt="Story character illustration"></div>
+                
+                <div class="thumb-item"><img src="images/0b9cedc7de748c32865202de3809a9d4.jpg" alt="Story character illustration"></div>
+                
+                <div class="thumb-item"><img src="/images/c7cb60cbc8078b53a573b10bc57638bd.jpg" alt="Story character illustration"></div>
+                
+                <div class="thumb-item"><img src="images/cd93404622c25f35bf0555e990363fdd.jpg" alt="Story character illustration"></div>
+                
+                <div class="thumb-item"><img src="images/77dd75f5b681d3a4d7b59bc6335a4fdf.jpg" alt="Story character illustration"></div>
+            </div>
+        </div>
+
+        <div class="image-section">
+            <div class="writer-frame"> 
+                <div class="frame-border"></div>
+                <img src="images/f4a7a494-8648-43bb-bfd4-cc9d6fdd09bc.jpeg" alt="Featured writer illustration" class="main-anime-img">
+            </div>
+        </div>
+    </div>
+
+    
+      <!-- ========== SITE HEADER ========== -->
+    <header class="site-header">
+        <h1 class="site-title"> Angel's Writer</h1>
+        <p class="site-tagline"> Written From The Heart</p>
+    </header>
+
+    <!-- ========== FANTASY STORIES SECTION ========== -->
+
+        <section id="FStory" class="fantasy-section">
+        
+        <div class="fantasy-box">
+            <div class="section-text">
+                <h2>Every Narrative Tells a Life</h2>
+                <p>I developed my writing skills starting when I was 11 years old – I’d watch fantasy and adventure movies nonstop, getting lost in every magical world and epic quest on screen. One day I thought, ‘What if I made my own stories too?’ So I began writing down horror, fantasy, and all sorts of tales in notebooks, even filling up whole pads with my ideas, scribbling whenever inspiration hit me, whether I was in class or at home! </p><br><br><br>
+                
+                
+                <p>I’d even let my friends and classmates read the stories in my notebooks to ask if they liked them, their feedback helped me figure out what worked and what I could make better.
+             From creating made-up worlds with their own rules and histories to dreaming up weird creatures that lived in hidden forests or dark caves, I built my style one page at a time. Over the years, I kept honing my craft, learning how to make characters feel real and plots that keep readers hooked and that’s how writing became such a big part of who I am now. </p>
+            </div>
+            <img src="/images/29cdbdcc53da3e3c988ca9544fbfa03e (1).gif" alt="Anime-style illustration of a fantasy world with castles and magic" class="section-img">
+        </div>
+    </section>
+      <!-- BOOKS SECTION - LANDSCAPE LAYOUT -->
+              <section id="books-section" class="section-title">
+
+<h2>MY FAVORITE STORY</h2>
+    <div class="books-grid">
+      <div class="book-item">
+        <img src="/images/Screenshot_20260109-215241.jpg" alt="Eres Academy Book Cover">
+        <h3>ERES ACADEMY</h3>
+        <p>Eres Academy is a fantasy story on Wattpad about a school for young people with special abilities, those chosen to be heroes of the future. This is my favorite story to read.</p>
+        <a href="https://www.wattpad.com/story/228911246?utm_medium=link&utm_source=android&utm_content=story_info" target="_blank">
+          <button class="learn-btn">VIEW STORY</button>
+        </a>
+      </div>
+
+      <div class="book-item">
+        <img src="/Screenshot_20260110-193913.jpg" alt="The Devils Mate Book Cover">
+        <h3>THE DEVÌLS MATE</h3>
+        <p>This story is a horror story. It's about a person who becomes the mate of a demonic being, and the terrifying consequences of their relationship.</p>
+        <a href="https://www.wattpad.com/story/109500180?utm_source=android&utm_medium=link&utm_content=story_info&wp_page=story_details_button&wp_uname=Angelvrn" target="_blank">
+          <button class="learn-btn">VIEW STORY</button>
+        </a>
+      </div>
+
+      <div class="book-item">
+        <img src="/images/Screenshot_20260110-200411.jpg" alt="Larika of Sakria City Book Cover">
+        <h3>LARIKA OF SAKRIA CITY</h3>
+        <p>Larika of Sakria City is a fantasy story. It follows Larika, a character connected to the mystical city of Sakria, where magic and extraordinary events shape her journey.</p>
+        <a href="https://www.wattpad.com/story/292699011?utm_source=android&utm_medium=link&utm_content=story_info&wp_page=story_details_button&wp_uname=Angelvrn" target="_blank">
+          <button class="learn-btn">VIEW STORY</button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+        <!-- ========== FEATURED STORIES ========== -->
+        <div id="Mbooks" class="books-section">
+    <h2 class="section-title">✨ My Therapy ✨</h2>
+    <div class="cards-container">
+        <div class="cards-scroll">
+            <!-- CARD 1 -->
+            <div class="story-card featured">
+                <img src="/images/e3cf9dbe8966cfc08352eb88448827ba (1).jpg" alt="Anime-style cover of 'Café at Midnight'" class="card-img">
+                <h3>Writing is my Therapy</h3>
+                
+            </div>
+
+
+            <!-- CARD 2 -->
+            <div class="story-card featured">
+                <img src="/images/bf917de4d927add598fe7c2feed9eafd.jpg" alt="Anime-style cover of 'Café at Midnight'" class="card-img">
+                <h3>If you are lost, Read</h3>
+                
+            </div>
+            <!-- CARD 3 -->
+            <div class="story-card featured">
+                <img src="/images/09e3d48eb59a3697d09f397c6689c276.jpg" alt="Anime-style cover of 'Cherry Blossom Love'" class="card-img">
+                <h3>Enjoy the little things</h3>
+        
+            </div>
+            <!-- CARD 4 -->
+            <div class="story-card featured">
+                <img src="/images/09e3d48eb59a3697d09f397c6689c276.jpg" alt="Anime-style cover of 'Summer Rain'" class="card-img">
+                <h3>I can and I will</h3>
+    
+            </div>
+
+</body>
+</html>
