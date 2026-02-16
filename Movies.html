@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOVIES</title>
+    <style>
+
+        body {
+            background: hotpink;
+            color: white;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 1.5rem;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+            z-index: 10;
+        }
+
+        .nav-links a {
+            color: #ddd;
+            text-decoration: none;
+            margin: 0 0.8rem;
+            font-size: 1rem;
+        }
+
+        .nav-links a:hover {
+            color:violet;
+        }
+
+        /* Sliding Container */
+        .carousel-container {
+            height: 100vh;
+            width: 100%;
+            overflow-y: auto;
+        }
+
+        /* Bawat Slide */
+        .carousel-slide {
+            height: 80vh;
+            width: 100%;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            scroll-snap-align: start;
+        }
+
+        .slide-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.7;
+        }
+
+        .slide-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 60%;
+            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+        }
+
+        .slide-content {
+            position: relative;
+            z-index: 2;
+            padding: 0 1.5rem 3rem;
+            max-width: 100%;
+        }
+
+        .platform-badge {
+            padding: 0.3rem 1rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .slide-movie {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size:1rem;
+            color: #eee;
+        }
+
+        .slide-desc {
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 2rem;
+            max-width: 90%;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            border: none;
+            padding: 0.9rem 2.2rem;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .play-btn {
+            background:pink;
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">⚪ MY FAV MOVIE</div>
+        <div class="nav-links">
+            <a href="#">Movies</a>
+            <a href="about me.html">Home</a>
+        </div>
+    </nav>
+
+
+    <!-- 5-Slide Carousel -->
+    <div class="carousel-container">
+        <!-- Slide 1 -->
+        <div class="carousel-slide" id="slide1">
+            <img src="/images/4f221ee4493f05b6deef1c77a926c095.jpg" class="slide-bg">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+                <h2 class="slide-title">TITANIC</h2>
+                <div class="slide-movie">
+                    <span> NETFLIX</span>
+                    <span>Drama/Romance</span>
+                </div>
+                <p class="slide-desc">The movie "Titanic" is a timeless epic romance about the tragic love story of Jack and Rose, two young lovers from different social classes who find each other on the ill-fated ship's doomed maiden voyage. The film's sweeping romance, memorable characters, and stunning visual effects bring to life the heartbreaking tale of the Titanic's sinking..</p>
+                <div class="action-buttons">
+                    <button class="btn play-btn">▶️ PLAY A SHORT CLIP</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-slide" id="slide2">
+            <img src="https://images.unsplash.com/photo-1585097161561-51b3048fa2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Horror Series" class="slide-bg">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+                <h2 class="slide-title">THE HAUNTING OF HILL HOUSE</h2>
+                <div class="slide-meta">
+                    <span>Season 3 • TV-14</span>
+                    <span>Drama/Sci-Fi</span>
+                </div>
+                <p class="slide-desc">Mga magkakapatid na muling nagkita matapos mamatay ang kanilang ama – at natuklasan nila ang mga lihim na pwede nang mapahamak ang buong mundo.</p>
+                <div class="action-buttons">
+                    <button class="btn play-btn">▶️ PLAY A SHORT CLIP</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-slide" id="slide3">
+            <img src="/images/09237c313d0f5e5fd2b5fcce613c109a.jpg" class="slide-bg">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+                <h2 class="slide-title">DISNEY: MALEFICENT</h2>
+                <div class="slide-meta">
+                    <span>Season 1 • Netflix</span>
+                    <span>Drama/Fantasy</span>
+                </div>
+                <p class="slide-desc">Maleficent" is a 2014 dark fantasy film that retells the classic tale of "Sleeping Beauty" from the villain's perspective, starring Angelina Jolie as the powerful and vengeful sorceress Maleficent.</p>
+                <div class="action-buttons">
+                    <button class="btn play-btn">▶️ PLAY A SHORT CLIP</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="carousel-slide" id="slide4">
+            <img src="https://images.unsplash.com/photo-1579403124614-197f69d8187b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Action Series" class="slide-bg">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+                <h2 class="slide-title">SPY NETWORK</h2>
+                <div class="slide-meta">
+                    <span>Season 2 • TV-MA</span>
+                    <span>Action/Thriller</span>
+                </div>
+                <p class="slide-desc">Isang ahente ng espiya ang kailangang puksain ang isang lihim na organisasyon na naglalayong sirain ang balangkas ng mundo ng pulitika.</p>
+                <div class="action-buttons">
+                    <button class="btn play-btn">▶️ PLAY A SHORT CLIP</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="carousel-slide" id="slide5">
+            <img src="https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Anime Series" class="slide-bg">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+                <h2 class="slide-title">STAR GUARDIANS</h2>
+                <div class="slide-meta">
+                    <span>Season 4 • TV-13</span>
+                    <span>Anime/Adventure</span>
+                </div>
+                <p class="slide-desc">Isang grupo ng mga mandirigma mula sa iba't ibang planeta ang sama-samang lumalaban para iligtas ang uniberso mula sa mga puwersa ng kadiliman.</p>
+                <div class="action-buttons">
+                    <button class="btn play-btn">▶️ PLAY A SHORT CLIP</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
