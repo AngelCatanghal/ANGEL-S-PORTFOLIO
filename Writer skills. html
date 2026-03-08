@@ -3,7 +3,7 @@
 <head>
     <title>My Writer Skills</title>
     <style>
-        * {
+        elements {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
