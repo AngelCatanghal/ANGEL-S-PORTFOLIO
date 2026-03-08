@@ -1,629 +1,494 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About me .</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ABOUT ME</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Cinzel', serif, Arial, sans-serif;
+      background-color:#8C1263;
+      color: #d0d4e3;
+      line-height: 1.5;
+    }
+    
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 1rem 1.5rem;
+    }
+    /* Header with icons (optional) */
+    /* Hero Section */
+    .hero {
+      position: relative;
+      height: 40vh;
+      background: url('/images/e3cf9dbe8966cfc08352eb88448827ba (1).jpg') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 1rem;
+      color: #e4eaf2;
+    }
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      text-shadow: 0 0 15px #F01783;
+      margin-bottom: 0.25em;
+    }
+    .hero p {
+      font-size: 1.5rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      margin-bot#FF45A7#C22FB4FAtom: 2em;
+      color:#D7CBD6FA;
+      text-shadow: 0 0 10px #D547C8FA;
+    }
+    .btn-explore {
+      padding: 0.75em 2.5em;
+      border: 2px solid #E92CC8;
+      color:#D51893FA;
+      font-weight: 700;
+      font-size: 1.25rem;
+      text-transform: uppercase;
+      background: transparent;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 8px #E36CCE;
+      border-radius: 6px;
+    }
+    .btn-explore:hover {
+      background-color: #CE2588;
+      color: #0e1122;
+      box-shadow: 0 0 15px #6ee3ff;
+    }
+    /* Stats Section */
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      margin: 3rem 1rem 4rem;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .stat-circle {
+      border-radius: 20%;
+      border: 2.5px solid;
+      width: 140px;
+      height: 140px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-weight: 700;
+      cursor: default;
+      user-select: none;
+    }
+    .stat-circle.teal {
+      border-color: #D765B8;
+      color:#C4F12F;
+    }
+    .stat-circle.maroon {
+      border-color: #F12F8D;
+      color: #DDF239;
+    }
+    .stat-circle .number {
+      font-size: 1.5rem;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.25em;
+    }
+    .stat-circle .label {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 400;
+      color: inherit;
+    }
+    /* ABOUT */
+
+.about{
+text-align:center;
+padding:80px 120px;
+font-size: 25px;
+}
+
+.title{
+font-size:28px;
+margin-bottom:30px;
+position:relative;
+color:#C9C85C;
+}
+
+.title::after{
+content:"";
+display:block;
+width:700px;
+height:3px;
+background:#C8ACBD;
+margin:10px auto;
+}
+/* SKILLS */
+
+.skills{
+padding:80px;
+text-align:center;
+}
+
+.skill-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:30px;
+max-width:800px;
+margin:auto;
+}
+
+.card{
+background:rgba(255,255,255,0.08);
+padding:40px;
+border-radius:12px;
+backdrop-filter:blur(10px);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+background:rgba(255,255,255,0.15);
+}
+}
+         /* Header Section */
+         .header {
+             text-align: center;
+             padding: 40px 20px 20px;
+         
+         }
+         .header p {
+             font-size: 20px;
+             color: #FFFFFD;
+             margin-bottom: 30px;
+             text-align: center;
+             
+         }
+         .image-grid-top {
+             display: grid;
+             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+             gap: 10px;
+             padding: 0 20px;
+         }
+         .image-grid-top img {
+             width: 100%;
+             height: 200px;
+             object-fit: cover;
+             border-radius: 4px;
+         }
+         /*Dream*/
+         .reasons {
+             padding: 60px 20px;
+             text-align: center;
+         }
+         .reasons h2 {
+             font-size: 24px;
+             margin-bottom: 40px;
+         }
+         .reasons-grid {
+             display: grid;
+             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+             gap: 30px;
+         }
+         .reason-card {
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+         }
+         .reason-icon {
+             width: 60px;
+             height: 60px;
+             border-radius: 50%;
+             background-color: #1A2431;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             margin-bottom: 15px;
+         }
+         .reason-icon img {
+             width: 30px;
+             height: 30px;
+             filter: invert(80%) sepia(30%) saturate(100%) hue-rotate(30deg);
+         }
+         .reason-card h3 {
+             font-size: 16px;
+             margin-bottom: 10px;
+             color: #D4AF37;
+         }
+         .reason-card p {
+             font-size: 13px;
+             color: #b0b0b0;
+             line-height: 1.4;
+         }
+         /* Dream job */
+         .vacation {
+             padding: 0 20px 60px;
+             display: grid;
+             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+             gap: 30px;
+             align-items: center;
+         }
+         .vacation-images {
+             display: grid;
+             grid-template-columns: repeat(2, 1fr);
+             gap: 10px;
+         }
+         .vacation-images img {
+             width: 100%;
+             height: 180px;
+             object-fit: cover;
+             border-radius: 4px;
+         }
+         .vacation-text h2 {
+             font-size: 30px;
+             margin-bottom: 20px;
+             line-height: 1.3;
+         }
+         .vacation-text p {
+             font-size: 20px;
+             color: white;
+             line-height: 1.6;
+             margin-bottom: 25px;
+         }
+         /* Other */
+    .projects-section {
+   padding: 2rem;
+   text-align: center;
+ }
+ .projects-section h2 {
+   color: #64ffda;
+   font-size: 2rem;
+   margin-bottom: 2rem;
+ }
+ .projects-container {
+   display: flex;
+   gap: 2rem;
+   justify-content: center;
+   flex-wrap: wrap;
+ }
+ .project-card {
+   background-color: #112240;
+   border-radius: 8px;
+   width: 300px;
+   overflow: hidden;
+   text-align: left;
+ }
+ .project-card img {
+   width: 100%;
+   height: auto;
+   display: block;
+ }
+ .project-card h3 {
+   color: #ccd6f6;
+   padding: 1rem;
+   margin: 0;
+   font-size: 1.2rem;
+ }
+ .card-actions {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0 1rem 1rem;
+ }
+ .card-actions span {
+   color: #8892b0;
+   font-size: 0.9rem;
+ }
+ .card-actions button {
+   background-color: transparent;
+   border: 1px solid #64ffda;
+   color: #64ffda;
+   border-radius: 50%;
+   width: 30px;
+   height: 30px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+   padding: 0;
+ }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .feature-section {
+        flex-direction: column !important;
+        text-align: center;
+      }
+      .feature-section:nth-child(even) {
+        flex-direction: column !important;
+      }
+      .feature-section img {
+        height: auto;
+        max-width: 100%;
+        margin-bottom: 1.5rem;
+      }
+      .feature-content {
+        padding: 0;
+      }
+      .stats {
+        justify-content: center;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header class="main-hero-section">
-        <div class="hero-content">
-            <div class="logo">Hello what's up <br> It's me </div>
-            <h1>Angel Catanghal.</h1>
-            <button class="btn-hero-explore">Scroll Down</button>
-        </div>
-        <!-- Background image will be set via CSS -->
-    </header>
+  <section class="hero" role="banner" aria-label="MysticMinds Hero Section">
+    <h1>ANGEL CATANGHAL</h1>
+    <p>This is all about me. If you would like to get to know me, simply scroll down.</p>
+    <a href="Cv. html" class="btn-explore" aria-label="Scroll down to stats section">VIEW MY CV</a>
+  </section>
+
+  <section class="stats" aria-label="Game stats">
+    <div class="stat-circle teal" role="region" aria-labelledby="downloads-label">
+        
+      <div class="number" id="downloads-number">ABOUT ME</div>
+    </div>
+    
+    <div class="stat-circle maroon" role="region" aria-labelledby="online-label">
+      
+      <div class="number" id="online-number">SKILLS</div>
+    </div>
+    <div class="stat-circle teal" role="region" aria-labelledby="characters-label">
+      <div class="number" id="characters-number">DREAM JOB</div>
+    </div>
+    <div class="stat-circle maroon" role="region" aria-labelledby="events-label">
+      <div class="number" id="events-number">OTHER</div>
+    </div>
+  </section>
+  <section class="about">
+<h2 class="title">About Me</h2>
+
+<p>
+I am an ICT student who is passionate about technology and continuously learning new things in the field of information technology. I enjoy creating simple websites using HTML and CSS, and I like exploring different ways to design layouts and improve the appearance of web pages. For me, technology is not only about coding but also about creativity and problem-solving.
+</p> <br
+
+<p>
+I am a motivated and hardworking person who always tries to improve my skills through practice and learning. I believe that every project I create helps me grow and understand programming better. My goal is to develop my abilities in web development and other areas of technology so that I can build useful digital solutions and pursue a successful career in the IT industry.</p> <br>
+<p>Aside from technology, I value personal growth, dedication, and perseverance. I believe that challenges are opportunities to learn and become better. As a student, I strive to stay curious, keep improving my knowledge, and continue developing skills that will help me achieve my dreams in the future.</p>
+
+</section>
+<section class="skills">
+
+<h2 class="title">What I Can Do</h2>
+
+<div class="skill-grid">
+
+<div class="card">
+<h3>EDITING</h3>
+</div>
+
+<div class="card">
+<h3>CRAFTING</h3>
+</div>
+
+<div class="card">
+<h3>CODING</h3>
+</div>
+
+<div class="card">
+<h3>WRITER</h3>
+</div>
+
+</div>
+
+</section>
+<!-- Header Section -->
+     <section class="header">
+         <p>We seek to provide the authentic content for travelers around the world</p>
+         <div class="image-grid-top">
+             <img src="/images/b3b4663cc789a970fcdfb331e9e88a67.gif" alt="Forest Path">
+             <img src="/images/1c89d06f682c2c5c4e50d2875b833016.jpg" alt="Elephant in Nature">
+             <img src="/images/c56c9756a71f917b5fd1c65f3f95d198.gif" alt="Rocky Mountains">
+         </div>
+     </section>
+     <!-- Reasons For Choosing Us Section -->
+     <section class="reasons">
+         <h2>DREAM JOB </h2>
+         <div class="reasons-grid">
+             <div class="reason-card">
+                 <div class="reason-icon">
+                     <img src="/images/af11fe9343c3f17350e3f279868127e2.jpg" alt="Trust Icon">
+                 </div>
+                 <h3>BUSINESS WOMAN</h3>
+                 <p>This is my first choice A businesswoman, leading and building successful ventures that drive growth and create meaningful opportunities.</p>
+             </div>
+             <div class="reason-card">
+                 <div class="reason-icon">
+                     <img src="https://cdn-icons-png.flaticon.com/512/1005/1005141.png" alt="Support Icon">
+                 </div>
+                 <h3>TOURISM</h3>
+                 <p>This is my second choice A career in tourism, curating enriching travel experiences and promoting destinations to foster cultural connection.</p>
+             </div>
+             <div class="reason-card">
+                 <div class="reason-icon">
+                     <img src="https://cdn-icons-png.flaticon.com/512/1005/1005069.png" alt="Partner Icon">
+                 </div>
+                 <h3>ACCOUNTANCY</h3>
+                 <p> This is my third choice A role in accountancy, maintaining financial integrity and providing strategic guidance to support smart business decisions.</p>
+             </div>
+         </div>
+     </section>
+     <!-- Vacation Perfect Section -->
+     <section class="vacation">
+         <div class="vacation-images">
+             <img src="/images/af11fe9343c3f17350e3f279868127e2.jpg" alt="Mountain Valley">
+             <img src="/images/bb7aeedb678a139d98d6f0281b8d29ae.jpg" alt="Jungle Path">
+             <img src="/images/e3a3269b2aad7fa54ae033790bc35818.jpg" alt="Winding Road">
+             <img src="/images/e920bdd68c5138a655566e5fe50d0c23.jpg" alt="Waterfall Cave">
+         </div>
+         <div class="vacation-text">
+             <h2>Business Woman</h2>
+             <p>I am a student who dreams of becoming a successful businesswoman someday. I believe that with hard work, determination, and creativity, I can achieve my goals. I want to build a business that will not only help me succeed but also support my family and inspire others. Being a businesswoman means being strong, responsible, and confident in making decisions. I will continue learning and improving my skills so I can turn my dreams into reality someday.</p>
+         </div>
+     </section>
+     <!-- Explore Section -->
+     <div class="projects-section">
+   <h2>OTHERS</h2>
+   <div class="projects-container">
+     <div class="project-card">
+       <img src="/images/f6f6ddab6d3c3f156d9bd88485ecda25.jpg" alt="Other">
+       <h3>Gallery</h3>
+       <div class="card-actions">
+                 <a href="about me.html" class="about-btn" target="_self">View more</a>
+
+       </div>
+     </div>
+     <div class="project-card">
+       <img src="/images/87775e4399475d284bbfee3cd1fc8f37.jpg" alt="Dashboard">
+       <h3>Movies</h3>
+       <div class="card-actions">
+                 <a href="/Movies.html" class="about-btn" target="_self">View more</a>
+
+       </div>
+     </div>
+     <div class="project-card">
+       <img src="/images/a6762e0a726f72151eab97ff145b1c72.jpg" alt="Login Form">
+       <h3>Music</h3>
+       <div class="card-actions">
+                 <a href="" class="about-btn" target="_self">View more</a>
+
+       </div>
+     </div>
+   </div>
+ </div>
 
-    <main>
-        <section class="about-section">
-            <div class="container">
-                <div class="about-left">
-                    <h2 class="section-title">ABOUT <br> ME</h2>
-                    <p class="intro-paragraph">Hello! If you'd like to learn a few things about me, everything is right here. Feel free to explore and get to know me better!</p>
-                    <p>
-                    First of all, I'm Angel. If you'd like to get to know me better, everything's right here my favorites, dream job, educational background, and a lot more about me, hehe.
-                    </p>
-                </div>
-                <div class="about-middle">
-                    <img src="">
-                </div>
-                <div class="about-right">
-                    <div class="im-here-for">
-                        <span class="decorative-icon">&#9875;</span>
-                        <p class="im-here-for-text">My skills</p> </p>
-                        <ul>
-                            <li><span class="list-dot"></span>Time management</li>
-                            <li><span class="list-dot"></span>Crocheting</li>
-                            <li><span class="list-dot"></span>Innovative Problem-Solving:</li>
-                            <li><span class="list-dot"></span>Crafting & DIY Skills</li>
-                            <li><span class="list-dot"></span>Financial Acumen</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section class="overflow-code-section">
-            <div class="container">
-                <div class="overflow-image-left">
-                    <img src="/images/2c8ebf9f82a29100e89a433f0e28efc0.jpg" alt="Woman on tablet">
-                    <div class="image-text">my <br>dream job</div>
-                </div>
-                <div class="overflow-content-right">
-                    <h2 class="section-title">BUSINESS WOMAN</h2>
-                    <p class="subtitle">When I was young, I truly admired the world of business and dreamt of becoming a successful businesswoman. This was largely because I grew up surrounded by relatives who were strong in business, and I saw how they prospered, how their earnings grew, and how this gave them the freedom and ability to achieve their dreams</p>
-                    <p>This greatly influenced my perspective and gave me a deep understanding of the potential for salary growth and personal fulfillment that such a career could provide.</p>
-                    <div class="details-list">
-                        <p><strong>Why is this the dream I pursue?:</strong></p>
-                        <ul>
-                            <li> High earning potential</li>
-                            <li> Opportunity to network and meet diverse people</li>
-                            <li> Independence in decision-making / Not relying on others</li>
-                        </ul>
-                        <p><strong> Businesswoman characteristics that I need to develop.</strong></p>
-                        <ul>
-                            <li>Strong-minded</li>
-                            <li>Ambitious and Passionate</li>
-                            <li>Excellent in Planning and Strategy</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="what-i-offer-section">
-            <div class="container">
-                <div class="offer-left-image">
-                    <img src="https://via.placeholder.com/400x700/A0522D/F0E0D6?text=Cherries" alt="Cherries background">
-                    <div class="offer-text-overlay">
-                        <h2 class="section-title">MY FAV</h2>
-                        
-                    <p>
-                    Presented here is a selection of my preferred items. You are welcome to review them at your convenience.
-                    </p>
-                    </div>
-                </div>
-                <div class="offer-right-cards">
-                    <div class="offer-card">
-                        <h4>MY GALLERY</h4>
-                        <p>I have a few pictures here; I just want to put them here as memories of my classmates.</p>
-                        <button class="btn-card-action">VIEW</button>
-                    </div>
-                    <div class="offer-card">
-                        <h4>MY FAV MUSiC</h4>
-                        <p>Here's some of my music. I just want to share it here if you want to open/play it</p>
-                        <button class="btn-card-action">VIEW</button>
-                    </div>
-                    <div class="offer-card">
-                        <h4>MY FAVORITE MOVIES</h4>
-                        <p>Here are some of my favorite movies I've watched since I was a child, including horror, fantasy, romance, and more.</p>
-                                            <a href="Movies.html" class="side-btn">View</a>
-
-                    </div>
-                    <div class="offer-card">
-                        <h4>BIBLE VERSES</h4>
-                        <p>Here are all my favorite Bible verses that serve as my life's motivation.</p>
-                        <button class="btn-card-action">VIEW</button>
-                    </div>
-                </div>
-                <div class="offer-right-image">
-                    <img src="" alt="Cocktail with cherry">
-                </div>
-            </div>
-        </section>
-
-        <section class="results-section">
-            <div class="container">
-                <h2 class="section-title">EDUCATIONAL BACKGROUND</h2>
-                <div class="testimonials-grid">
-                    <div class="testimonial-item">
-                        <img src="/images/6a9ef78d78e2d99ae4ca18e473d2fb5e.jpg" alt="Cherry Lips">
-                        <p>JUNIOR HIGH SCHOOL</p>
-                        <p class="testimonial-quote">School: Sta Ines Integrated School <br>
-‎Specialization: Handicraft <br>
-Year Graduated:2021-2025</p>
-                    </div>
-                    <div class="testimonial-item">
-                        <img src="/images/6a9ef78d78e2d99ae4ca18e473d2fb5e.jpg" alt="Strawberry Cake">
-                        <p> SENIOR HIGH SCHOOL</p>
-                        <p class="testimonial-quote">School:Children of fatima School Of
-‎Mabalacat inc.<br>
-‎Strand: ICT
-<br>‎Year Graduated: 2025-2027</p>
-                    </div>
-            </div>
-        </section>
-    </main>
-    <style>
-      /* General Styling */
-body {
-    font-family: 'Times New Roman', Times, serif;
-    margin: 0;
-    line-height: 1;
-    color: #333;
-    background-color: hotpink;
-}
-
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family:Times 'Times New Roman', Times, serif;
-    color: hotpink;
-    line-height: 1.1;
-    margin-top: 0;
-    margin-bottom: 0.5em;
-}
-
-h1 {
-    font-size: 8em; 
-    text-transform: uppercase;
-    font-weight: 500;
-}
-
-h2.section-title {
-    font-size: 3rem;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-p {
-    color: #555;
-    margin-bottom: 1em;
-    font-size: 1rem;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-button {
-    border: none;
-    cursor: pointer;
-    font-family:times 'Times New Roman', Times, serif;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    border-radius: 5px;
-}
-
-/* Main Hero Section */
-.main-hero-section {
-    background-image: url('https://via.placeholder.com/1920x1080/A0522D/F8F4ED?text=Hero+Image'); 
-    background-size: cover;
-    background-position: center;
-    min-height: 50vh; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    padding: 50px 20px;
-}
-
-.main-hero-section::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background:grey;
-    z-index: 0;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 1;
-    color: violet;
-}
-
-.hero-content .logo {
-    font-family:times 'Times New Roman', Times, serif;
-    font-size: 3rem;
-    line-height: 0.9;
-    margin-bottom: 20px;
-    color:white;
-}
-
-.hero-content h1 {
-    color:pink;
-    font-size: 4rem; 
-    margin-bottom: 30px;
-}
-
-.btn-hero-explore {
-    background-color:pink; 
-    color: hotpink;
-    padding: 15px 35px;
-    font-size: 1.1em;
-    border-radius: 50px; 
-}
-
-.btn-hero-explore:hover {
-    background-color: pink;
-}
-
-/* About Section */
-.about-section {
-    background-color: #F8F4ED;
-    padding: 100px 0;
-}
-
-.about-section .container {
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
-}
-
-.about-left {
-    flex: 2;
-    padding-right: 20px;
-}
-
-.about-left .section-title {
-    color: hotpink;
-    margin-bottom: 20px;
-}
-
-.about-left .intro-paragraph {
-    font-weight: 500;
-    font-size: 1.2em;
-    color:black;
-}
-
-.about-middle {
-    flex: 1.5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color:grey;
-    padding: 20px;
-    border-radius: 5px;
-}
-
-.about-middle img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 5px;
-}
-
-.about-right {
-    flex: 1;
-    background-color:grey;
-    padding: 30px;
-    border-radius: 5px;
-    color:maroon;
-}
-
-.im-here-for {
-    text-align: center;
-}
-
-.im-here-for .decorative-icon {
-    font-size: 2em;
-    color: #F8F4ED;
-    margin-bottom: 10px;
-    display: block;
-}
-
-.im-here-for-text {
-    font-family: times new r'Times New Roman', Times, serif;
-    font-size: 1.5em;
-    margin-bottom: 20px;
-    color:black;
-}
-
-.im-here-for ul {
-    list-style: none;
-    padding: 0;
-    text-align: left;
-    margin-bottom: 30px;
-}
-
-.im-here-for ul li {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 15px;
-    font-size: 0.95em;
-    color: #F8F4ED;
-    font-weight: 400;
-}
-
-.im-here-for .list-dot {
-    display: inline-block;
-    width: 6px;
-    height: 6px;
-    background-color: #F8F4ED;
-    border-radius: 50%;
-    margin-right: 10px;
-    margin-top: 6px; 
-    flex-shrink: 0;
-}
-
-.im-here-for .signature {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.2em;
-    margin-top: 20px;
-    color: #F8F4ED;
-    font-style: italic;
-}
-
-/* The Overflow Code Section */
-.overflow-code-section {
-    background-color: #E6DCD7; 
-    padding: 100px 0;
-}
-
-.overflow-code-section .container {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-}
-
-.overflow-image-left {
-    flex: 1;
-    position: relative;
-    background-color: hotpink;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-}
-
-.overflow-image-left img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 5px;
-}
-
-.overflow-image-left .image-text {
-    font-family: 'Playfair Display', serif;
-    position: absolute;
-    bottom: 20px;
-    left: 40px; /* Adjust as needed */
-    color: #F8F4ED;
-    font-size: 2.5em;
-    line-height: 0.9;
-    font-weight: 700;
-    text-transform: lowercase; /* as seen in the image */
-}
-
-
-.overflow-content-right {
-    flex: 2;
-}
-
-.overflow-content-right .section-title {
-    color: #A0522D;
-    margin-bottom: 10px;
-}
-
-.overflow-content-right .subtitle {
-    font-weight: 600;
-    color: #A0522D;
-    font-size: 1.1em;
-    margin-bottom: 20px;
-}
-
-.overflow-content-right p {
-    color:black;
-    margin-bottom: 20px;
-}
-
-.overflow-content-right .details-list {
-    margin-bottom: 30px;
-}
-
-.overflow-content-right .details-list p {
-    font-weight: 600;
-    color:black;
-    margin-bottom: 10px;
-}
-
-.overflow-content-right .details-list ul {
-    list-style: none;
-    padding: 0;
-    margin-left: 15px; 
-    margin-bottom: 20px;
-}
-
-.overflow-content-right .details-list ul li {
-    position: relative;
-    color: #555;
-    margin-bottom: 8px;
-    padding-left: 20px;
-}
-
-.overflow-content-right .details-list ul li::before {
-    position: absolute;
-    left: 0;
-    color: #A0522D;
-    font-weight: 700;
-}
-
-.btn-find-out-more {
-    background-color: hotpink ;
-    color: #F8F4ED;
-    padding: 15px 35px;
-    font-size: 1.1em;
-    border-radius: 50px; 
-}
-
-.btn-find-out-more:hover {
-    background-color:grey;
-}
-
-/* What I Offer Section */
-.what-i-offer-section {
-    background-color:
-    padding: 100px 0;
-}
-
-.what-i-offer-section .container {
-    display: flex;
-    gap: 40px;
-    align-items: stretch;
-}
-
-.offer-left-image {
-    flex: 1;
-    position: relative;
-    min-height: 500px; /* Ensure it has some height */
-    border-radius: 5px;
-    overflow: hidden;
-}
-
-.offer-left-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    filter: brightness(0.6); /* Darken image slightly */
-}
-
-.offer-text-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #F8F4ED;
-    width: 80%; /* Adjust width for text */
-}
-
-.offer-text-overlay .section-title {
-    color: #F8F4ED;
-    font-size: 3em;
-    margin-bottom: 20px;
-}
-
-.offer-text-overlay p {
-    color: #F8F4ED;
-    font-weight: 500;
-    line-height: 1.3;
-    font-size: 1.1em;
-    text-transform: uppercase;
-}
-
-.offer-right-cards {
-    flex: 2;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.offer-card {
-    background-color: #F8F4ED; /* Light background */
-    padding: 30px;
-    border-radius: 5px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.offer-card h4 {
-    font-family: 'Montserrat', sans-serif;
-    color: #A0522D;
-    font-size: 1.2em;
-    font-weight: 700;
-    margin-bottom: 15px;
-}
-
-.offer-card p {
-    color: #555;
-    font-size: 0.95em;
-    margin-bottom: 15px;
-    flex-grow: 1; 
-}
-
-.btn-card-action {
-    background-color:hotpink;
-    color: #A0522D;
-    padding: 10px 20px;
-    font-size: 0.9em;
-    border-radius: 50px;
-    align-self: flex-start; 
-}
-
-.btn-card-action:hover {
-    background-color: hotpink;
-}
-
-.offer-right-image {
-    flex: 0.8; 
-    display: fle
-    align-items: center;
-    justify-content: center;
-    background-color: #E6DCD7;
-    padding: 20px;
-    border-radius: 5px;
-}
-
-.offer-right-image img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 5px;
-}
-
-/* Results That Matter Section */
-.results-section {
-    background-color: #F8F4ED;
-    padding: 100px 0;
-}
-
-.results-section .section-title {
-    text-align: center;
-    margin-bottom: 60px;
-    font-size: 3em;
-}
-
-.testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.testimonial-item {
-    background-color: hotpink ;
-    border-radius: 5px;
-    padding: 30px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.testimonial-item img {
-    width: 100%; 
-    height: 200px; 
-    object-fit: cover;
-    border-radius: 5px;
-    margin-bottom: 20px;
-}
-
-.testimonial-item p:first-of-type {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5em;
-    color: hotpink;
-    font-weight: 700;
-    margin-bottom: 15px;
-}
-
-.testimonial-item .testimonial-quote {
-    font-style: italic;
-    color:black;
-    margin-bottom: 20px;
-    flex-grow: 1; 
-
-    </style>
 </body>
 </html>
+
