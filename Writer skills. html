@@ -11,7 +11,7 @@
         }
 
         body {
-            background-image:url(/images/tumblr_pk56rtBoPQ1uzwgsuo1_400.gif);
+            background-color: #5C0D3B;
                 background-size: cover;
             background-repeat: no-repeat;
             min-height: 100vh;
